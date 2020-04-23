@@ -1,0 +1,11 @@
+# ignore project files
+.idea
+
+# ignore install files and dependecies, this comes with npm install
+node_modules
+package-lock.json
+
+# ignore .env file
+.env
+
+# ignore build files
