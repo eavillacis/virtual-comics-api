@@ -1,14 +1,10 @@
+const serverless = require('serverless-http');
 const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const path = require('path');
 
 const app = express();
-
-const { port, node_env } = require('./config');
-
-app.set('port', port);
-app.set('env', node_env);
 
 app.use(logger('tiny'));
 app.use(bodyParser.json());
@@ -30,11 +26,4 @@ app.use((err, req, res, next) => {
     });
 });
 
-
-app.listen(port, () => {
-    console.log(
-        `Express Server started on Port ${app.get(
-            'port'
-        )} | Environment : ${app.get('env')}`
-    );
-});
+module.exports.lambdaHandler = serverless(app);

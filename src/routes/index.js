@@ -16,11 +16,6 @@ router
 const getComics = async (req, res, next) => {
     try {
         let ts = Date.now();
-
-        console.log(apiURL);
-        console.log(publicKey);
-        console.log(privateKey);
-
         let apiHash = crypto.createHash('md5').update(ts + privateKey + publicKey ).digest("hex");
 
        request({
