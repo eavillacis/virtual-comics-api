@@ -13,4 +13,5 @@ phases:
   post_build:
     commands:
       - echo "post_build step"
+      - echo "test 3"
       - sam deploy
