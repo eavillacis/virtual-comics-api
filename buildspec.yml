@@ -1,0 +1,16 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - echo "install step"
+  pre_build:
+    commands:
+      - echo "pre_build step"
+  build:
+    commands:
+      - echo "pre_build step"
+      - sam build
+  post_build:
+    commands:
+      - echo "post_build step"
+      - sam deploy

@@ -88,3 +88,4 @@ You can find more information and examples about filtering Lambda function logs 
 
 - Add API authentication
 - Improve logic and develop using TDD
+- Improve CI CD with version control (AWS API Gateway Stages)
