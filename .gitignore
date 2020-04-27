@@ -13,4 +13,4 @@ src/package-lock.json
 
 # ignore SAM deploy files
 .aws-sam
-samconfig.toml
+#samconfig.toml

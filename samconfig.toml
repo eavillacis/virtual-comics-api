@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "virtual-comics"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1uzkfn589wxyz"
+s3_prefix = "virtual-comics"
+region = "us-east-2"
+profile = "SAML"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
