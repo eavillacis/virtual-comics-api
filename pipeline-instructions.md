@@ -51,7 +51,7 @@ Before we create this 3-environment Pipeline through Cloudformation you may want
             Environment: 
                 Type: LINUX_CONTAINER
                 ComputeType: BUILD_GENERAL1_SMALL
-                Image: aws/codebuild/nodejs:latest # More info on Images: https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html
+                Image: aws/codebuild/amazonlinux2-x86_64-standard:3.0 # More info on Images: https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html
                 EnvironmentVariables:
                   - 
                     Name: BUILD_OUTPUT_BUCKET
