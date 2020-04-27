@@ -84,6 +84,10 @@ simple-node-api$ sam logs -n VirtualComicsFunction --stack-name simple-node-api 
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
 
+## Deploying this API
+
+Documentation can be found [here](pipeline-instructions.md)
+
 ## Next Steps
 
 - Add API authentication
