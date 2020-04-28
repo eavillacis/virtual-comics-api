@@ -34,7 +34,7 @@ Resources:
     Properties:
       LayerName: virtual-comics-dependencies
       Description: Dependencies api
-      ContentUri: src/dependencies/
+      ContentUri: dependencies/
       CompatibleRuntimes:
         - nodejs6.10
         - nodejs8.10
