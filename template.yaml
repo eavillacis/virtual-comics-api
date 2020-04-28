@@ -16,6 +16,8 @@ Resources:
     Properties:
       CodeUri: src/
       Handler: app.lambdaHandler
+      Layers:
+        - !Ref VirtualComicsLayer
       Runtime: nodejs12.x
       Environment:
         Variables:
