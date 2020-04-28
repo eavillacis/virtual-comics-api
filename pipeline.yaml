@@ -323,7 +323,7 @@ Resources:
                                 - 'iam:PassRole'
                                 - 'lambda:InvokeFunction'
                                 - 'lambda:ListFunctions'
-                                - 'lambda:InvokeAsyc'
+                                - 'lambda:InvokeAsync'
                             Resource: '*'
                 - PolicyName: CodePipelineCodeAndArtifactsS3Bucket
                   PolicyDocument:
