@@ -2,8 +2,8 @@
 .idea
 
 # ignore install files and dependecies, this comes with npm install
-src/node_modules
-src/package-lock.json
+dependencies/node_modules
+dependencies/package-lock.json
 
 # ignore .env file
 .env
