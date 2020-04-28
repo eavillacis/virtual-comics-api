@@ -31,7 +31,6 @@ phases:
       ## Here we separate Build from Deployment and segregate permissions for different steps
       - echo "Starting SAM packaging `date` in `pwd`"
       - sam build
-      - cd .aws-sam/build/
       - sam package --template-file template.yaml --s3-bucket $BUILD_OUTPUT_BUCKET --output-template-file packaged.yaml
   post_build:
     commands:
@@ -46,7 +45,7 @@ phases:
 artifacts:
   files:
     # list of local files relative to this build environment that will be added to the final artifact (zip)
-    - ./packaged.yaml
+    - packaged.yaml
   discard-paths: yes
 
 #########################################
