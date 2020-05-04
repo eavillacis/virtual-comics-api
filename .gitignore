@@ -2,8 +2,9 @@
 .idea
 
 # ignore install files and dependecies, this comes with npm install
-dependencies/node_modules
-dependencies/package-lock.json
+# TODO: fix dependencies with SAM codebuild stage
+#src/node_modules
+#src/package-lock.json
 
 # ignore .env file
 .env

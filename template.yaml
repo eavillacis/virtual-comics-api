@@ -16,8 +16,6 @@ Resources:
     Properties:
       CodeUri: src/
       Handler: app.lambdaHandler
-      Layers:
-        - !Ref VirtualComicsLayer
       Runtime: nodejs12.x
       Environment:
         Variables:
@@ -30,18 +28,6 @@ Resources:
           Properties:
             Path: /{proxy+}
             Method: any
-
-  VirtualComicsLayer:
-    Type: AWS::Serverless::LayerVersion
-    Properties:
-      LayerName: virtual-comics-dependencies
-      Description: Dependencies api
-      ContentUri: dependencies/
-      CompatibleRuntimes:
-        - nodejs6.10
-        - nodejs8.10
-      LicenseInfo: 'MIT'
-      RetentionPolicy: Retain
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
