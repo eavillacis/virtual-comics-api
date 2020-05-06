@@ -9,7 +9,7 @@ const { apiURL, publicKey, privateKey } = require('../config');
  * @returns {Object}
  */
 exports.getComics = [
-    function (req, res) {
+    function (req, res, next) {
         try {
 
             console.log(req.query);

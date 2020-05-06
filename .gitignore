@@ -3,7 +3,7 @@
 
 # ignore install files and dependecies, this comes with npm install
 # TODO: fix dependencies with SAM codebuild stage
-src/node_modules
+src/node_modules/
 src/node_modules/*
 src/package-lock.json
 

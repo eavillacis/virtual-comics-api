@@ -58,4 +58,4 @@ artifacts:
 cache:
   paths:
   # List of path that CodeBuild will upload to S3 Bucket and use in subsequent runs to speed up Builds
-  # - '/root/.cache/pip'
+  # - './src/node_modules'

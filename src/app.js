@@ -3,10 +3,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 
+const AWSXRay = require('aws-xray-sdk');
+
+const app = express();
+
 const statusRouter = require("./routes");
 const apiRouter = require("./routes/api");
 
-const app = express();
+app.use(AWSXRay.express.openSegment('virtualComics'));
 
 app.use(logger('tiny'));
 app.use(bodyParser.json());
@@ -28,5 +32,7 @@ app.use((err, req, res, next) => {
         },
     });
 });
+
+app.use(AWSXRay.express.closeSegment());
 
 module.exports.lambdaHandler = serverless(app);

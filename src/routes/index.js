@@ -1,6 +1,7 @@
-var express = require("express");
+const express = require("express");
 
-var router = express.Router();
+const app = express();
+const router = express.Router();
 
 router.get("/", function(req, res) {
     res.json(["Status OK"]);

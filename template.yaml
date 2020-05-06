@@ -19,9 +19,9 @@ Resources:
       Runtime: nodejs12.x
       Environment:
         Variables:
-          API_URL: API_URL
-          API_PUBLIC_KEY: API_PUBLIC_KEY
-          API_PRIVATE_KEY: API_PRIVATE_KEY
+          API_URL: https://gateway.marvel.com:443/v1/public/series/19242/comics
+          API_PUBLIC_KEY: acb90b51b812acb3dd003a26118fd071
+          API_PRIVATE_KEY: 3d16e2a5bc5087e19efddbc71e43ffc530c03251
       Events:
         VirtualComicsEvent:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
