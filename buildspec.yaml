@@ -19,12 +19,14 @@ phases:
     commands:
       # Use Install phase to install packages or any pre-reqs you may need throughout the build (e.g. dev deps, security checks, etc.)
        - echo "[Install phase]"
-       - npm i --dev ./src
+       - cd ./src
+       - npm i --only=dev
   pre_build:
     commands:
       # Use Pre-Build phase to run tests, install any code deps or any other customization before build
        - echo "[Pre-Build phase]"
-       - npm test ./src
+       - npm test
+       - cd ../
   build:
     commands:
       # Use Build phase to build your artifacts (compile, package, etc.)
