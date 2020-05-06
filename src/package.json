@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec --exit"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,12 @@
     "morgan": "^1.10.0",
     "request": "^2.88.2",
     "serverless-http": "^2.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.1.2",
+    "nock": "^12.0.3"
   }
 }
