@@ -1,5 +1,6 @@
 const crypto = require('crypto');
 const request = require('request');
+const AWSXRay = require('aws-xray-sdk');
 
 const { apiURL, publicKey, privateKey } = require('../config');
 
@@ -10,8 +11,11 @@ const { apiURL, publicKey, privateKey } = require('../config');
  */
 exports.getComics = [
     function (req, res, next) {
-        try {
 
+        const segment = AWSXRay.getSegment();
+        segment.addAnnotation('ulr', 'comics');
+
+        try {
             console.log(req.query);
 
             let ts = Date.now();
