@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/", function(req, res) {
     const segment = AWSXRay.getSegment();
-    segment.addAnnotation('ulr', 'index');
+    segment.addAnnotation('segment', 'index');
 
     res.json(["Status OK"]);
 });

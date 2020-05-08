@@ -16,7 +16,7 @@ exports.getComics = [
     function (req, res, next) {
 
         const segment = AWSXRay.getSegment();
-        segment.addAnnotation('ulr', 'comics');
+        segment.addAnnotation('segment', 'get star wars comics');
 
         try {
             console.log(req.query);
