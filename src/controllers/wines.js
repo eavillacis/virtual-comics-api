@@ -14,8 +14,9 @@ exports.getWines = [
     try {
       CSVToJSON()
         .fromFile("https://wines-assets.s3-us-west-2.amazonaws.com/wines.csv")
-        .then((wines) => {                    
-          res.json(wines);
+        .then((wines) => {
+          console.log('WINES ---> ', wines)                 
+          res.json(JSON.stringify(wines));
         })
         .catch((err) => {
           // log error if any
