@@ -11,20 +11,18 @@ exports.getWines = [
     const segment = AWSXRay.getSegment();
     segment.addAnnotation("segment", "get wines data");
 
-    const getCsvData = async () => {
+    let wines;
+    async () => {
       try {
         const csvFilePath =
           "https://wines-assets.s3-us-west-2.amazonaws.com/wines.csv";
-        const wines = await CSVToJSON().fromFile(csvFilePath);
-
-        // log the JSON array
-        console.log(wines);
+        wines = await CSVToJSON().fromFile(csvFilePath);
       } catch (err) {
         console.log(err);
       }
     };
 
-    console.log("wines ---> ", getCsvData());
+    console.log("wines ---> ", wines);
 
     res.json(["Status OK WINES"]);
 
