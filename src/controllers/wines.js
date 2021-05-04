@@ -17,14 +17,16 @@ exports.getWines = [
         const csvFilePath =
           "https://wines-assets.s3-us-west-2.amazonaws.com/wines.csv";
         wines = await CSVToJSON().fromFile(csvFilePath);
+        return wines
       } catch (err) {
         console.log(err);
       }
     };
 
-    wines = getWinesData().then(result);
+    const result = await getWinesData(items);
 
     console.log("wines ---> ", wines);
+    console.log("result ---> ", result);
 
     res.json(["Status OK WINES"]);
   },
