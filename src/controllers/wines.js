@@ -22,14 +22,10 @@ exports.getWines = [
       }
     };
 
-    getWinesData().then((result) => {
-      console.log("result --> ", result)
-      wines = result
-    })
+    wines = getWinesData().then(result);
 
     console.log("wines ---> ", wines);
 
     res.json(["Status OK WINES"]);
-
   },
 ];
