@@ -6,7 +6,7 @@ const CSVToJSON = require("csvtojson");
  *
  * @returns {Object}
  */
-exports.getComics = [
+exports.getWines = [
   function (req, res, next) {
     const segment = AWSXRay.getSegment();
     segment.addAnnotation("segment", "get wines data");
