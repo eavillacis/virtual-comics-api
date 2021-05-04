@@ -1,5 +1,6 @@
 # ignore project files
 .idea
+.vscode
 
 # ignore install files and dependecies, this comes with npm install
 # TODO: fix dependencies with SAM codebuild stage
