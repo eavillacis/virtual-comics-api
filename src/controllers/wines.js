@@ -12,7 +12,7 @@ exports.getWines = [
     segment.addAnnotation("segment", "get wines data");
 
     let wines;
-    (async () => {
+    const getWinesData = async () => {
       try {
         const csvFilePath =
           "https://wines-assets.s3-us-west-2.amazonaws.com/wines.csv";
@@ -20,7 +20,9 @@ exports.getWines = [
       } catch (err) {
         console.log(err);
       }
-    });
+    };
+
+    getWinesData().then((result) => wines = result)
 
     console.log("wines ---> ", wines);
 
