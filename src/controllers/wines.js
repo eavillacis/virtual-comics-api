@@ -12,7 +12,7 @@ exports.getWines = [
     segment.addAnnotation("segment", "get wines data");
 
     let wines;
-    async () => {
+    (async () => {
       try {
         const csvFilePath =
           "https://wines-assets.s3-us-west-2.amazonaws.com/wines.csv";
@@ -20,25 +20,11 @@ exports.getWines = [
       } catch (err) {
         console.log(err);
       }
-    };
+    });
 
     console.log("wines ---> ", wines);
 
     res.json(["Status OK WINES"]);
 
-    // try {
-    //   CSVToJSON()
-    //     .fromFile("https://wines-assets.s3-us-west-2.amazonaws.com/wines.csv")
-    //     .then((wines) => {
-    //       console.log('WINES ---> ', wines)
-    //       res.json(["Status OK WINES"]);
-    //     })
-    //     .catch((err) => {
-    //       // log error if any
-    //       console.log(err);
-    //     });
-    // } catch (e) {
-    //   next(e);
-    // }
   },
 ];
